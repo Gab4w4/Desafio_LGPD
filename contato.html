@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-nos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
+    <script src="./js/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="logoMarca" src="img/logo-ford-256.png" alt="Logo-Ford">
+    
+        <nav class="cabecalho">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>    
+
+    <main>
+        <div class="form-container">
+            <img class="img-modelo" src="img/xls 2.2 diesel.jpg" alt="Modelo Ford de Carro">
+    
+            <form id="meuForm" onsubmit="Post(this); return false;">
+                <h2>Sobre você</h2>
+                <label>Nome:</label>
+                <input class="inputDados" name="nome" type="text" placeholder="NOME*" id="nome" required>
+                <label>E-mail:</label>
+                <input class="inputDados" name="email" type="email" placeholder="E-MAIL*" id="email" required>
+                <label>Tel.:</label>
+                <input class="inputDados" name="telefone" type="text" placeholder="TELEFONE*" id="telefone" required>
+                <label>Tipo de contato:</label>
+                <select class="inputDados" name="tipoContato" id="contato" required>
+                    <option value="" disabled selected>TIPO DE CONTATO</option>
+                    <option value="1">Elogio</option>
+                    <option value="2">Reclamação</option>
+                    <option value="3">Solicitação</option>
+                </select>
+                <label>Mensagem:</label>
+                <textarea name="mensagem" class="mensagem-contato" id="mensagem" placeholder="MENSAGEM*" required></textarea>
+                <span class="mensagemDados">
+                    Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados.
+                    <a href="">Termos e condições</a>
+                </span>
+                <br>
+                <div class="containerCheckBox">
+                    <div class="checkboxContato">
+                        <input type="checkbox" class="checkbox" id="termos-condicoes">
+                            <span> Sim. Li e concordo com os Termos e Condições'.</span>
+                    </div>
+                    <div class="checkboxContato">
+                        <input type="checkbox" class="checkbox">
+                        <span> Sim. Também quero receber descontos e novidades.</span>
+                    </div>
+                </div>
+                <button id="btnEnviar" class="button-contato">Enviar</button>
+                
+                <div class="pop-up" id="pop-up">
+                    <h3 style="font-size: 25px;">Confirme seus dados:</h3>
+                    <p><strong>Nome:</strong> <span id="popup-nome"></span></p>
+                    <p><strong>E-mail:</strong> <span id="popup-email"></span></p>
+                    <p><strong>Telefone:</strong> <span id="popup-telefone"></span></p>
+                    <p><strong>Tipo de Contato:</strong> <span id="popup-tipoContato"></span></p>
+                    <p><strong>Mensagem:</strong> <span id="popup-mensagem"></span></p>
+                    
+                    <br><br>
+                    <div class="popup-buttons">
+                        <button id="buttonConfirm" onclick="Enviar()">Confirmar</button>
+                        <button id="closePopup">Fechar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="rodape">
+           
+
+            <div class="iconesRodape">
+                <h2>Redes sociais</h2>
+                <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR" target="_blank">
+                <img class="icon" src="img/facebook-50.png" alt="Icone_Facebook"></a>
+
+                <a href="https://www.youtube.com/@fordbrasil" target="_blank">
+                <img class="icon" src="img/youtube-squared-50.png" alt="Icone_Youtube"></a>
+                
+                <a href="https://www.instagram.com/fordbrasil/" target="_blank">
+                <img class="icon" src="img/instagram-logo-50.png" alt="Icone_Instagram"></a>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
+            </div>
+
+            <img class="logo_rodape" src="img/ford-96.png" alt="Icone_Ford">
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/faviconV2.png">
+    <script src="js/carousel.js"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logoMarca" src="img/logo-ford-256.png" alt="Logo-Ford">
+    
+        <nav class="cabecalho">
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>    
+
+    <main>
+        <div id="carousel">
+            <i onclick="Carousel.Prev()" class="bi bi-arrow-left"></i>
+            <img alt="Imagem modelo" id="img">
+            <i onclick="Carousel.Next()" class="bi bi-arrow-right"></i>
+        </div>
+        <div id="carousel-title">
+            <a href="" id="link"><p id="descricao"></p></a>
+        </div>
+        <br>
+            
+        </div>    
+
+            <script>
+                //insert each image on carousel
+               carouselArr.push(new Carousel("./img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
+               carouselArr.push(new Carousel("./img/imagem_2.jpg","Ford a nossa história","#"));
+               carouselArr.push(new Carousel("./img/imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+               Carousel.Start(carouselArr);
+           </script>
+    </main>
+
+
+    <footer>
+        <div class="rodape">
+           
+
+            <div class="iconesRodape">
+                <h2>Redes sociais</h2>
+                <a href="https://www.facebook.com/FordBrasil/?locale=pt_BR" target="_blank">
+                <img class="icon" src="img/facebook-50.png" alt="Icone_Facebook"></a>
+
+                <a href="https://www.youtube.com/@fordbrasil" target="_blank">
+                <img class="icon" src="img/youtube-squared-50.png" alt="Icone_Youtube"></a>
+                
+                <a href="https://www.instagram.com/fordbrasil/" target="_blank">
+                <img class="icon" src="img/instagram-logo-50.png" alt="Icone_Instagram"></a>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2025 Ford Motor Company - Todos os direitos reservados</p>
+            </div>
+
+            <img class="logo_rodape" src="img/ford-96.png" alt="Icone_Ford">
+        </div>
+    </footer>
+
+</body>
+
+</html>
